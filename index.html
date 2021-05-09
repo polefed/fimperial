@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Описание страницы сайта." />
+    <style>@charset "UTF-8";@font-face{font-family:Ubuntu-Bold;font-display:swap;src:url(../fonts/Ubuntu-Bold.woff) format("woff"),url(../fonts/Ubuntu-Bold.woff2) format("woff2");font-weight:400;font-style:normal}@font-face{font-family:Ubuntu-Medium;font-display:swap;src:url(../fonts/Ubuntu-Medium.woff) format("woff"),url(../fonts/Ubuntu-Medium.woff2) format("woff2");font-weight:400;font-style:normal}@font-face{font-family:Ubuntu-Regular;font-display:swap;src:url(../fonts/Ubuntu-Regular.woff) format("woff"),url(../fonts/Ubuntu-Regular.woff2) format("woff2");font-weight:400;font-style:normal}*,:after,:before{margin:0;padding:0;border:0;-webkit-box-sizing:border-box;box-sizing:border-box}:root{--font-1:"Ubuntu-Bold";--font-2:"Ubuntu-Medium";--font-3:"Ubuntu-Regular";--weight-1:500;--container:1160px;--max-width:1440;--size-1:14px;--size-2:16px;--size-3:12px;--size-4:20px;--size-5:36px;--size-6:24px;--size-7:22px;--size-8:10px;--color-1:#787878;--color-2:#517300;--color-3:#232323;--color-4:#FFFFFF;--color-5:#C4C4C4;--color-6:#FFBE00;--color-7:#F9F8FD;--color-8:#F92424;--color-9:#A3B47B;--color-10:#E9E9E9;--color-11:#AE9220;--color-12:#969696;--color-13:#395100;--color-14:#E5E5E5;--link:#3ea6ff;--hover-1:#FFBE00;--transition-1:all 0.5s;--back-to-top-1:#FFBE00;--back-to-top-2:#FFFFFF}html{font-size:10px}body{font-family:var(--font-1);font-weight:var(--weight-3);font-size:var(--size-1);background-color:var(--color-4);color:var(--color-1);height:100%;overflow-x:hidden;-webkit-font-smoothing:antialiased}body.__lock{overflow:hidden}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}a{display:inline-block;color:inherit;text-decoration:none}img{vertical-align:middle;max-width:100%;border-style:none}ol,ul{list-style:none}h1,h2,h3,h4,h5,h6{font-size:inherit}:focus{outline:0}button{display:inline-block;background-color:transparent;padding:0;border:none;font-family:inherit;cursor:pointer}input{font-family:inherit}input[type=text]{padding:0 10px}input[type=checkbox],input[type=file],input[type=range],label,select{cursor:pointer}textarea{font-family:inherit;overflow:auto;resize:vertical;padding:10px;min-height:50px}optgroup,select{font-family:inherit;font-size:100%}.container{max-width:var(--container);margin:0 auto;padding:0 10px}.back-to-top-button{position:fixed;z-index:100;background-color:var(--back-to-top-1);border-radius:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:40px;height:40px;right:10px;bottom:10px;-webkit-transition:.5s;-o-transition:.5s;transition:.5s;visibility:hidden;opacity:0;-webkit-transition:var(--transition-1);-o-transition:var(--transition-1);transition:var(--transition-1)}.back-to-top-button-icon{-webkit-transition:var(--transition-1);-o-transition:var(--transition-1);transition:var(--transition-1);width:20px;height:20px;fill:var(--back-to-top-2)}.back-to-top-button__show{visibility:visible;opacity:.7}.burger-button{-webkit-box-flex:0;-ms-flex:0 0 44px;flex:0 0 44px;z-index:3;display:none;height:44px;-webkit-box-shadow:0 2px 0 #e1e1e3;box-shadow:0 2px 0 #e1e1e3;background-color:var(--color-7);border-radius:50%;position:relative}.burger-button span{position:absolute;background-color:var(--color-1);border-radius:3px;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}.burger-button span:nth-child(1){top:13.4px;width:19px;height:2px;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}.burger-button span:nth-child(2){top:18.29px;width:22px;height:2px;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}.burger-button span:nth-child(3){bottom:18.29px;width:22px;height:2px;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}.burger-button span:nth-child(4){bottom:13.4px;width:19px;height:2px;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}.burger-button.__active span:nth-child(1){display:none}.burger-button.__active span:nth-child(2){top:18.5px;left:11px;top:21px;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.burger-button.__active span:nth-child(3){bottom:18.5px;left:11px;bottom:21px;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}.burger-button.__active span:nth-child(4){display:none}.catalog-menu__header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:15px 10px 0 10px;margin-bottom:15px;display:none}.catalog-menu__title{margin-right:70px}.catalog-menu__close{width:44px;height:44px;-webkit-box-shadow:0 2px 0 #e1e1e3;box-shadow:0 2px 0 #e1e1e3;background-color:var(--color-7);border-radius:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.search{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;--search-1:red;--search-2:black;--search-3:white;--search-4:green}.search-icon{fill:var(--search-1);width:20px;height:20px}.slick-slider{min-width:0;overflow:hidden}.slick-list{overflow:hidden}.slick-track{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.main-slider .slick-dots{display:-webkit-box;display:-ms-flexbox;display:flex;margin-top:3rem}.main-slider .slick-dots li{list-style:none;margin-right:11px}.main-slider .slick-dots li:last-child{margin-right:0}.main-slider .slick-dots button{font-size:0;width:8px;height:8px;border-radius:50%;border:2px solid #fff}.main-slider .slick-dots li.slick-active button{background-color:#fff}.brands-slider .slick-dots{position:absolute;top:-9rem;right:10px;display:-webkit-box;display:-ms-flexbox;display:flex;margin-top:3rem}.brands-slider .slick-dots li{list-style:none;margin-right:11px}.brands-slider .slick-dots li:last-child{margin-right:0}.brands-slider .slick-dots button{font-size:0;width:8px;height:8px;border-radius:50%;border:2px solid var(--color-3)}.brands-slider .slick-dots li.slick-active button{background-color:var(--color-3)}.header{text-transform:uppercase}.header-top{background-color:var(--color-4);line-height:calc(16 / var(--size-1) * 100%);position:relative;z-index:10}.header-top:before{position:absolute;content:'';top:0;left:0;width:100%;height:100%;background-color:var(--color-4);z-index:2}.header-top__inner{min-height:100px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.header-top__left{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;white-space:nowrap;position:relative;z-index:2}.header-top__logo{-webkit-box-flex:0;-ms-flex:0 0 143px;flex:0 0 143px;height:51px}.header-top__logo img{display:block;width:100%}.header-top .header-top__phones-container{margin-left:20px}.header-top__phone{display:-webkit-box;display:-ms-flexbox;display:flex;margin-bottom:6px}.header-top__phone:last-child{margin:0}.header-top__number{margin-right:10px;-webkit-transition:var(--transition-1);-o-transition:var(--transition-1);transition:var(--transition-1)}.header-top__label{font-weight:400}.header-top__right{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;z-index:2}.header-top__login{color:var(--color-3);margin-bottom:10px;-webkit-transition:var(--transition-1);-o-transition:var(--transition-1);transition:var(--transition-1)}.header-top__cart{background:-webkit-gradient(linear,left top,left bottom,from(#ffdd4e),color-stop(99.99%,#ffd31b),to(#ffd31b));background:-o-linear-gradient(top,#ffdd4e 0,#ffd31b 99.99%,#ffd31b 100%);background:linear-gradient(180deg,#ffdd4e 0,#ffd31b 99.99%,#ffd31b 100%);-webkit-box-shadow:0 3px 0 #f2c610;box-shadow:0 3px 0 #f2c610;border-radius:30px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:8px 50px 8px 12px;-webkit-transition:var(--transition-1);-o-transition:var(--transition-1);transition:var(--transition-1)}.header-top__cart-icon{width:26px;height:26px;opacity:.5}.header-top__cart-label{color:var(--color-3);opacity:.5;margin-left:2.6rem}.navigation-menu{position:relative;z-index:2;-webkit-box-flex:0;-ms-flex:0 0 450px;flex:0 0 450px}.navigation-menu__list{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-wrap:wrap;flex-wrap:wrap}.navigation-menu__item{margin:7px 20px 7px 7px}.navigation-menu__item:first-child{margin-left:33px}.navigation-menu__link{color:var(--color-3);-webkit-transition:var(--transition-1);-o-transition:var(--transition-1);transition:var(--transition-1)}.header-bottom{background-color:var(--color-7);padding:10px 0}.header-bottom__inner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.header-bottom__left{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-right:4rem}.header-bottom__label{margin-left:1.3rem;color:var(--color-12);padding-bottom:3px}.header-bottom__list{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-wrap:wrap;flex-wrap:wrap}.header-bottom__item{padding:5px 2.5rem}.header-bottom__link{color:var(--color-2);padding-bottom:3px}.about{position:relative;overflow:hidden}.about__image-01{position:absolute;z-index:2;bottom:0;left:-320px;width:65.2rem;height:58.4rem}.about__image-02{position:absolute;z-index:2;top:0;right:-220px;width:61.4rem;height:54.8rem}.about__inner{width:75.4rem;margin:0 auto;padding:17rem 0 17rem 0}.about__title{text-align:center;font-size:var(--size-5);line-height:calc(41 / var(--size-5) * 100%);color:var(--color-3);margin-bottom:3.5rem;position:relative;z-index:3}.about__text{font-family:var(--font-3);background-color:var(--color-4);padding:5px;z-index:3;margin-bottom:2.5rem;position:relative;z-index:3}.about__text:last-child{margin:0}.about__text span{font-family:var(--font-1);color:var(--color-2)}.banner{background-color:var(--color-7);margin:2rem auto 6rem auto;position:relative;z-index:1;max-width:1140px;min-height:260px;padding:20px;border-radius:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;overflow:hidden}.banner__block{position:relative;z-index:2;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.banner__title{font-size:var(--size-5);line-height:calc(41 / var(--size-5) * 100%);color:var(--color-3);margin-bottom:1rem}.banner__subtitle{font-size:var(--size-4);font-weight:400;line-height:calc(23 / var(--size-4) * 100%);color:var(--color-3)}.banner__number{font-weight:700;font-size:var(--size-5);line-height:calc(41 / var(--size-5) * 100%);color:var(--color-2);margin:0 .5rem}.banner__button{background:-webkit-gradient(linear,left top,left bottom,from(#ffdd4e),color-stop(99.99%,#ffd31b),to(#ffd31b));background:-o-linear-gradient(top,#ffdd4e 0,#ffd31b 99.99%,#ffd31b 100%);background:linear-gradient(180deg,#ffdd4e 0,#ffd31b 99.99%,#ffd31b 100%);-webkit-box-shadow:0 3px 0 #f3c814;box-shadow:0 3px 0 #f3c814;border-radius:30px;padding:1.2rem 7.4rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:3rem;text-transform:uppercase;color:var(--color-3);line-height:calc(16 / var(--size-1) * 100%)}.banner__image{position:absolute}.banner__image-01{top:-30px;left:-80px;width:34.6rem;height:32.9rem}.banner__image-02{top:17rem;left:23rem}.banner__image-03{top:-30px;right:-100px;width:41.6rem;height:35.5rem}.banner__image-04{top:-60px;right:-60px;width:16.5rem;height:16.5rem}.catalog{margin-bottom:10px}.catalog__inner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.catalog-menu{margin-bottom:34px}.catalog-menu__list{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 -10px}.catalog-menu__item{padding:0 10px;margin-bottom:6px}.catalog-menu__link{font-family:var(--font-2);line-height:calc(16 / var(--size-1) * 100%);text-transform:uppercase;padding:4px 0}.catalog-menu__link-all{font-family:var(--font-1);line-height:calc(16 / var(--size-1) * 100%);text-transform:uppercase;border-radius:15px;padding:4px 12px;-webkit-transition:var(--transition-1);-o-transition:var(--transition-1);transition:var(--transition-1)}.catalog-menu__link-red-1,.catalog-menu__link-red-2{color:var(--color-8)}.catalog-menu__link-red-1{padding-left:26px;position:relative}.catalog-menu__link-red-1:before{position:absolute;content:'';left:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);background-image:url(../img/catalog-link__red-icon.svg);width:19px;height:19px}.catalog-list{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 -10px 10px -10px}.catalog-list__item{-webkit-box-flex:0;-ms-flex:0 1 25%;flex:0 1 25%;padding:0 10px;margin-bottom:6rem}.catalog-list__content{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;height:100%;position:relative}</style>
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Food imperial</title>
+</head>
+
+<body>
+	<!-- back to top button -->
+	<button class="back-to-top-button" aria-label="Переместиться в самый вверх">
+		<svg class="back-to-top-button-icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492"
+			style="enable-background:new 0 0 492 492;" xml:space="preserve">
+			<g>
+				<g>
+					<path
+						d="M442.627,185.388L265.083,7.844C260.019,2.78,253.263,0,245.915,0c-7.204,0-13.956,2.78-19.02,7.844L49.347,185.388
+			   c-10.488,10.492-10.488,27.568,0,38.052l16.12,16.128c5.064,5.06,11.82,7.844,19.028,7.844c7.204,0,14.192-2.784,19.252-7.844
+			   l103.808-103.584v329.084c0,14.832,11.616,26.932,26.448,26.932h22.8c14.832,0,27.624-12.1,27.624-26.932V134.816l104.396,104.752
+			   c5.06,5.06,11.636,7.844,18.844,7.844s13.864-2.784,18.932-7.844l16.072-16.128C453.163,212.952,453.123,195.88,442.627,185.388z" />
+				</g>
+			</g>
+			<g>
+			</g>
+			<g>
+			</g>
+			<g>
+			</g>
+			<g>
+			</g>
+			<g>
+			</g>
+			<g>
+			</g>
+			<g>
+			</g>
+			<g>
+			</g>
+			<g>
+			</g>
+			<g>
+			</g>
+			<g>
+			</g>
+			<g>
+			</g>
+			<g>
+			</g>
+			<g>
+			</g>
+			<g>
+			</g>
+		</svg>
+	</button>
+	<!-- header -->
+	<header class="header">
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top__inner">
+
+                <div class="header-top__left">
+                    <!-- logo -->
+                    <a class="header-top__logo logo" href="#" ><picture><source srcset="img/logo.svg" type="image/webp"><img src="img/logo.svg" width="159" height="57" loading="lazy" alt="logo"></picture></img></a>
+                   <div class="header-top__phones-container" data-da="navigation-menu__list,768,last,max">
+                    <ul class="header-top__phones">
+                        <li class="header-top__phone">
+                            <a href="tel:+0995000307" class="header-top__number">099 5000 307</a>
+                            <span class="header-top__label">ОБЕДЫ</span>
+                        </li>
+                        <li class="header-top__phone">
+                            <a href="tel:+097500030" class="header-top__number">097 5000 307</a>
+                            <span class="header-top__label">КЕЙТЕРИНГ</span>
+                        </li>
+                        <li class="header-top__phone">
+                            <a href="tel:+0735000301" class="header-top__number">073 5000 301</a>
+                            <span class="header-top__label">ФУРШЕТ BOX</span>
+                        </li>
+                    </ul>
+                   </div>
+                </div>
+
+                <!-- menu -->
+                <nav class="navigation-menu">
+                    <ul class="navigation-menu__list">
+                        <li class="navigation-menu__item"><a href="#" class="navigation-menu__link">ГЛАВНАЯ</a></li>
+                        <li class="navigation-menu__item"><a href="#" class="navigation-menu__link">ДОСТАВКА</a></li>
+                        <li class="navigation-menu__item"><a href="#" class="navigation-menu__link">МЕНЮ</a></li>
+                        <li class="navigation-menu__item"><a href="#" class="navigation-menu__link">КОНТАКТЫ</a></li>
+                        <li class="navigation-menu__item"><a href="#" class="navigation-menu__link">ОБЕДЫ</a></li>
+                        <li class="navigation-menu__item"><a href="#" class="navigation-menu__link">КЕЙТЕРИНГ</a></li>
+                        <li class="navigation-menu__item"><a href="#" class="navigation-menu__link">ФУРШЕТ</a></li>
+                        <li class="navigation-menu__item"><a href="#" class="navigation-menu__link">ТОРТЫ НА ЗАКАЗ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- burger -->
+                <button class="burger-button" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="header-top__right">
+                    <button class="header-top__login login" data-da="navigation-menu__list,768,last,max">ВХОД ДЛЯ КЛИЕНТОВ</button>
+                    <button class="header-top__cart cart">
+                            <picture><source srcset="img/cart.webp" type="image/webp"><img class="header-top__cart-icon cart-icon" src="img/cart.png" width="26" height="26" loading="lazy" alt="image"></picture></img>
+                        <span class="header-top__cart-label">КОРЗИНА</span>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="container">
+            <div class="header-bottom__inner">
+                <div class="header-bottom__left">
+                    <picture><source srcset="img/menu-icon.svg" type="image/webp"><img class="header-bottom__icon" src="img/menu-icon.svg" loading="lazy" alt="image"></picture></img>
+                    <span class="header-bottom__label">Меню</span>
+                </div>
+                <nav class="header-bottom__menu">
+                    <ul class="header-bottom__list">
+                        <li class="header-bottom__item"><a class="header-bottom__link" href="#" >Понедельник</a></li>
+                        <li class="header-bottom__item"><a class="header-bottom__link" href="#" >Вторник</a></li>
+                        <li class="header-bottom__item"><a class="header-bottom__link" href="#" >Среда</a></li>
+                        <li class="header-bottom__item"><a class="header-bottom__link" href="#" >Четверг</a></li>
+                        <li class="header-bottom__item"><a class="header-bottom__link" href="#" >Пятница</a></li>
+                        <li class="header-bottom__item"><a class="header-bottom__link" href="#" >Суббота</a></li>
+                        <li class="header-bottom__item"><a class="header-bottom__link" href="#" >Воскресенье</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- progress bar -->
+        <div class="progress-bar"></div>
+    </div>
+</header>
+	<main class="main">
+		<!-- catalog -->
+		<section class="catalog">
+
+        <div class="banner">
+
+            <picture><source srcset="img/banner_image-01.webp" type="image/webp"><img class="banner__image banner__image-01" src="img/banner_image-01.png" loading="lazy" alt="image"></picture></img>
+            <picture><source srcset="img/banner_image-02.webp" type="image/webp"><img class="banner__image banner__image-02" src="img/banner_image-02.png" loading="lazy" alt="image"></picture></img>
+            <picture><source srcset="img/banner_image-03.webp" type="image/webp"><img class="banner__image banner__image-03" src="img/banner_image-03.png" loading="lazy" alt="image"></picture></img>
+            <picture><source srcset="img/banner_image-04.webp" type="image/webp"><img class="banner__image banner__image-04" src="img/banner_image-04.png" loading="lazy" alt="image"></picture></img>
+
+            <div class="banner__block">
+                <h1 class="banner__title">Новогоднее предложение</h1>
+                <p class="banner__subtitle">Праздничный ужин <span class="banner__number">250</span> грн/чел</p>
+            </div>
+
+            <button class="banner__button">Заказать</button>
+
+        </div>
+
+        <div class="container">
+            <div class="catalog__inner">
+
+                <nav class="catalog-menu">
+                    <div class="catalog-menu__header">
+                        <h3 class="catalog-menu__title">ФИЛЬТРЫ</h3>
+                        <button class="catalog-menu__close">
+                            <picture><source srcset="img/catalog-menu__close.svg" type="image/webp"><img src="img/catalog-menu__close.svg" loading="lazy" width="17" height="17" alt="close icon"></picture></img>
+                        </button>
+                    </div>
+                    <ul class="catalog-menu__list">
+                        <li class="catalog-menu__item"><a class="catalog-menu__link catalog-menu__link-all __active" data-filter="all" href="#" >все</a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" data-filter="salads" href="#" >салаты</a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" data-filter="first courses" href="#" >первые блюда</a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" data-filter="main dishes" href="#" >основные блюда</a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" data-filter="side dishes" href="#" >гарниры</a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" data-filter="desserts" href="#" >десерты</a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" data-filter="salted baked goods" href="#" >выпечка соленая</a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" data-filter="set meals" href="#" >комплексные обеды</a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" data-filter="drinks and supplements" href="#" >напитки и добавки</a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" data-filter="baked goods" href="#" >хлебобулочные изделия</a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" data-filter="disposable appliances" href="#" >одноразовые приборы</a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link catalog-menu__link-red-1" data-filter="new year offer" href="#" >новогоднее предложение</a></li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link catalog-menu__link-red-2" data-filter="festive dinner - 250 UAH / person" href="#" >праздничный ужин - 250 грн/чел</a></li>
+                    </ul>
+                </nav>
+
+                <!-- filter buttom -->
+                <button class="filter-button">
+                    <h2 class="filter-button__title">ФИЛЬТРЫ</h2>
+                    <span class="filter-button__category">Все</span>
+                </button>
+                
+                <ul class="catalog-list">
+                    <li class="catalog-list__item" data-category="salads">
+                        <div class="catalog-list__content">
+                            <div class="catalog-list__top">
+                                <div class="catalog-list__image"><picture><source srcset="img/catalog_01.webp" type="image/webp"><img class="lazyload" width="143" height="143" data-src="img/catalog_01.png" loading="lazy" alt="catalog image"></picture></img></div>
+                                <div class="catalog-list__right">
+                                    <h3 class="catalog-list__title">Фиджи салат</h3>
+                                    <div class="catalog-list__right-bottom">
+                                        <div class="catalog-list__counter">
+                                            <button class="catalog-list__minus">-</button>
+                                            <div class="catalog-list__number">1</div>
+                                            <button class="catalog-list__plus">+</button>
+                                        </div>
+                                        <div class="catalog-list__weight">150 г</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="catalog-list__middle">Листья салата, помидоры черри, огурцы, перепелиные яйца, растительное масло, мёд, лимон</p>
+                            <div class="catalog-list__bottom">
+                                <div class="catalog-list__price"><span class="catalog-list__price-number">38</span>грн</div>
+                                <button class="catalog-list__pay">КУПИТЬ</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-list__item" data-category="first courses">
+                        <div class="catalog-list__content">
+                            <div class="catalog-list__top">
+                                <div class="catalog-list__image"><picture><source srcset="img/catalog_02.webp" type="image/webp"><img class="lazyload" width="143" height="143" data-src="img/catalog_02.png" loading="lazy" alt="catalog image"></picture></img></div>
+                                <div class="catalog-list__right">
+                                    <h3 class="catalog-list__title">Буряк отварной салат</h3>
+                                    <div class="catalog-list__right-bottom">
+                                        <div class="catalog-list__counter">
+                                            <button class="catalog-list__minus">-</button>
+                                            <div class="catalog-list__number">1</div>
+                                            <button class="catalog-list__plus">+</button>
+                                        </div>
+                                        <div class="catalog-list__weight">150 г</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="catalog-list__middle">Отварная свекла, соль, растительное масло</p>
+                            <div class="catalog-list__bottom">
+                                <div class="catalog-list__price"><span class="catalog-list__price-number">18</span>грн</div>
+                                <button class="catalog-list__pay">КУПИТЬ</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-list__item" data-category="salads">
+                        <div class="catalog-list__content">
+                            <div class="catalog-list__top">
+                                <div class="catalog-list__image"><picture><source srcset="img/catalog_03.webp" type="image/webp"><img class="lazyload" width="143" height="143" data-src="img/catalog_03.png" loading="lazy" alt="catalog image"></picture></img></div>
+                                <div class="catalog-list__right">
+                                    <h3 class="catalog-list__title">Греческий салат</h3>
+                                    <div class="catalog-list__right-bottom">
+                                        <div class="catalog-list__counter">
+                                            <button class="catalog-list__minus">-</button>
+                                            <div class="catalog-list__number">1</div>
+                                            <button class="catalog-list__plus">+</button>
+                                        </div>
+                                        <div class="catalog-list__weight">200 г</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="catalog-list__middle">Помидоры, болгарский перец, огурцы, красный лук, маслины, сыр фета, оливковое масло</p>
+                            <div class="catalog-list__bottom">
+                                <div class="catalog-list__price"><span class="catalog-list__price-number">42</span>грн</div>
+                                <button class="catalog-list__pay">КУПИТЬ</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-list__item" data-category="main dishes">
+                        <div class="catalog-list__content">
+                            <div class="catalog-list__top">
+                                <div class="catalog-list__image"><picture><source srcset="img/catalog_04.webp" type="image/webp"><img class="lazyload" width="143" height="143" data-src="img/catalog_04.png" loading="lazy" alt="catalog image"></picture></img></div>
+                                <div class="catalog-list__right">
+                                    <h3 class="catalog-list__title">Капуста свежая с зеленью</h3>
+                                    <div class="catalog-list__right-bottom">
+                                        <div class="catalog-list__counter">
+                                            <button class="catalog-list__minus">-</button>
+                                            <div class="catalog-list__number">1</div>
+                                            <button class="catalog-list__plus">+</button>
+                                        </div>
+                                        <div class="catalog-list__weight">100 г</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="catalog-list__middle">Свежая капуста, морковь, укроп, зеленый лук, растительное масло</p>
+                            <div class="catalog-list__bottom">
+                                <div class="catalog-list__price"><span class="catalog-list__price-number">18</span>грн</div>
+                                <button class="catalog-list__pay">КУПИТЬ</button>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="catalog-list__item" data-category="salads">
+                        <div class="catalog-list__content">
+                            <div class="catalog-list__top">
+                                <div class="catalog-list__image"><picture><source srcset="img/catalog_03.webp" type="image/webp"><img class="lazyload" width="143" height="143" data-src="img/catalog_03.png" loading="lazy" alt="catalog image"></picture></img></div>
+                                <div class="catalog-list__right">
+                                    <h3 class="catalog-list__title">Греческий салат</h3>
+                                    <div class="catalog-list__right-bottom">
+                                        <div class="catalog-list__counter">
+                                            <button class="catalog-list__minus">-</button>
+                                            <div class="catalog-list__number">1</div>
+                                            <button class="catalog-list__plus">+</button>
+                                        </div>
+                                        <div class="catalog-list__weight">200 г</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="catalog-list__middle">Помидоры, болгарский перец, огурцы, красный лук, маслины, сыр фета, оливковое масло</p>
+                            <div class="catalog-list__bottom">
+                                <div class="catalog-list__price"><span class="catalog-list__price-number">42</span>грн</div>
+                                <button class="catalog-list__pay">КУПИТЬ</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-list__item" data-category="main dishes">
+                        <div class="catalog-list__content">
+                            <div class="catalog-list__top">
+                                <div class="catalog-list__image"><picture><source srcset="img/catalog_04.webp" type="image/webp"><img class="lazyload" width="143" height="143" data-src="img/catalog_04.png" loading="lazy" alt="catalog image"></picture></img></div>
+                                <div class="catalog-list__right">
+                                    <h3 class="catalog-list__title">Капуста свежая с зеленью</h3>
+                                    <div class="catalog-list__right-bottom">
+                                        <div class="catalog-list__counter">
+                                            <button class="catalog-list__minus">-</button>
+                                            <div class="catalog-list__number">1</div>
+                                            <button class="catalog-list__plus">+</button>
+                                        </div>
+                                        <div class="catalog-list__weight">100 г</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="catalog-list__middle">Свежая капуста, морковь, укроп, зеленый лук, растительное масло</p>
+                            <div class="catalog-list__bottom">
+                                <div class="catalog-list__price"><span class="catalog-list__price-number">18</span>грн</div>
+                                <button class="catalog-list__pay">КУПИТЬ</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-list__item" data-category="first courses">
+                        <div class="catalog-list__content">
+                            <div class="catalog-list__top">
+                                <div class="catalog-list__image"><picture><source srcset="img/catalog_02.webp" type="image/webp"><img class="lazyload" width="143" height="143" data-src="img/catalog_02.png" loading="lazy" alt="catalog image"></picture></img></div>
+                                <div class="catalog-list__right">
+                                    <h3 class="catalog-list__title">Буряк отварной салат</h3>
+                                    <div class="catalog-list__right-bottom">
+                                        <div class="catalog-list__counter">
+                                            <button class="catalog-list__minus">-</button>
+                                            <div class="catalog-list__number">1</div>
+                                            <button class="catalog-list__plus">+</button>
+                                        </div>
+                                        <div class="catalog-list__weight">150 г</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="catalog-list__middle">Отварная свекла, соль, растительное масло</p>
+                            <div class="catalog-list__bottom">
+                                <div class="catalog-list__price"><span class="catalog-list__price-number">18</span>грн</div>
+                                <button class="catalog-list__pay">КУПИТЬ</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-list__item" data-category="salads">
+                        <div class="catalog-list__content">
+                            <div class="catalog-list__top">
+                                <div class="catalog-list__image"><picture><source srcset="img/catalog_01.webp" type="image/webp"><img class="lazyload" width="143" height="143" data-src="img/catalog_01.png" loading="lazy" alt="catalog image"></picture></img></div>
+                                <div class="catalog-list__right">
+                                    <h3 class="catalog-list__title">Фиджи салат</h3>
+                                    <div class="catalog-list__right-bottom">
+                                        <div class="catalog-list__counter">
+                                            <button class="catalog-list__minus">-</button>
+                                            <div class="catalog-list__number">1</div>
+                                            <button class="catalog-list__plus">+</button>
+                                        </div>
+                                        <div class="catalog-list__weight">150 г</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="catalog-list__middle">Листья салата, помидоры черри, огурцы, перепелиные яйца, растительное масло, мёд, лимон</p>
+                            <div class="catalog-list__bottom">
+                                <div class="catalog-list__price"><span class="catalog-list__price-number">38</span>грн</div>
+                                <button class="catalog-list__pay">КУПИТЬ</button>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="catalog-list__item" data-category="first courses">
+                        <div class="catalog-list__content">
+                            <div class="catalog-list__top">
+                                <div class="catalog-list__image"><picture><source srcset="img/catalog_02.webp" type="image/webp"><img class="lazyload" width="143" height="143" data-src="img/catalog_02.png" loading="lazy" alt="catalog image"></picture></img></div>
+                                <div class="catalog-list__right">
+                                    <h3 class="catalog-list__title">Буряк отварной салат</h3>
+                                    <div class="catalog-list__right-bottom">
+                                        <div class="catalog-list__counter">
+                                            <button class="catalog-list__minus">-</button>
+                                            <div class="catalog-list__number">1</div>
+                                            <button class="catalog-list__plus">+</button>
+                                        </div>
+                                        <div class="catalog-list__weight">150 г</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="catalog-list__middle">Отварная свекла, соль, растительное масло</p>
+                            <div class="catalog-list__bottom">
+                                <div class="catalog-list__price"><span class="catalog-list__price-number">18</span>грн</div>
+                                <button class="catalog-list__pay">КУПИТЬ</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-list__item" data-category="salads">
+                        <div class="catalog-list__content">
+                            <div class="catalog-list__top">
+                                <div class="catalog-list__image"><picture><source srcset="img/catalog_01.webp" type="image/webp"><img class="lazyload" width="143" height="143" data-src="img/catalog_01.png" loading="lazy" alt="catalog image"></picture></img></div>
+                                <div class="catalog-list__right">
+                                    <h3 class="catalog-list__title">Фиджи салат</h3>
+                                    <div class="catalog-list__right-bottom">
+                                        <div class="catalog-list__counter">
+                                            <button class="catalog-list__minus">-</button>
+                                            <div class="catalog-list__number">1</div>
+                                            <button class="catalog-list__plus">+</button>
+                                        </div>
+                                        <div class="catalog-list__weight">150 г</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="catalog-list__middle">Листья салата, помидоры черри, огурцы, перепелиные яйца, растительное масло, мёд, лимон</p>
+                            <div class="catalog-list__bottom">
+                                <div class="catalog-list__price"><span class="catalog-list__price-number">38</span>грн</div>
+                                <button class="catalog-list__pay">КУПИТЬ</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-list__item" data-category="salads">
+                        <div class="catalog-list__content">
+                            <div class="catalog-list__top">
+                                <div class="catalog-list__image"><picture><source srcset="img/catalog_03.webp" type="image/webp"><img class="lazyload" width="143" height="143" data-src="img/catalog_03.png" loading="lazy" alt="catalog image"></picture></img></div>
+                                <div class="catalog-list__right">
+                                    <h3 class="catalog-list__title">Греческий салат</h3>
+                                    <div class="catalog-list__right-bottom">
+                                        <div class="catalog-list__counter">
+                                            <button class="catalog-list__minus">-</button>
+                                            <div class="catalog-list__number">1</div>
+                                            <button class="catalog-list__plus">+</button>
+                                        </div>
+                                        <div class="catalog-list__weight">200 г</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="catalog-list__middle">Помидоры, болгарский перец, огурцы, красный лук, маслины, сыр фета, оливковое масло</p>
+                            <div class="catalog-list__bottom">
+                                <div class="catalog-list__price"><span class="catalog-list__price-number">42</span>грн</div>
+                                <button class="catalog-list__pay">КУПИТЬ</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-list__item" data-category="main dishes">
+                        <div class="catalog-list__content">
+                            <div class="catalog-list__top">
+                                <div class="catalog-list__image"><picture><source srcset="img/catalog_04.webp" type="image/webp"><img class="lazyload" width="143" height="143" data-src="img/catalog_04.png" loading="lazy" alt="catalog image"></picture></img></div>
+                                <div class="catalog-list__right">
+                                    <h3 class="catalog-list__title">Капуста свежая с зеленью</h3>
+                                    <div class="catalog-list__right-bottom">
+                                        <div class="catalog-list__counter">
+                                            <button class="catalog-list__minus">-</button>
+                                            <div class="catalog-list__number">1</div>
+                                            <button class="catalog-list__plus">+</button>
+                                        </div>
+                                        <div class="catalog-list__weight">100 г</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="catalog-list__middle">Свежая капуста, морковь, укроп, зеленый лук, растительное масло</p>
+                            <div class="catalog-list__bottom">
+                                <div class="catalog-list__price"><span class="catalog-list__price-number">18</span>грн</div>
+                                <button class="catalog-list__pay">КУПИТЬ</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <button class="load-more">Еще 8 блюд</button>
+
+            </div>
+        </div>
+
+</section>
+		<!-- advantages -->
+		
+		<!-- reviews -->
+		<section class="reviews">
+    <picture><source srcset="img/reviews__image-01.webp" type="image/webp"><img class="reviews__image-01 lazyload" data-src="img/reviews__image-01.png" aria-hidden="true" loading="lazy" alt="image"></picture></img>
+    <picture><source srcset="img/reviews__image-02.webp" type="image/webp"><img class="reviews__image-02 lazyload" data-src="img/reviews__image-02.png" aria-hidden="true" loading="lazy" alt="image"></picture></img>
+    <h4 class="reviews__title">Отзывы наших клиентов</h4>
+    <div class="reviews__inner">
+        <div class="reviews__slider">
+            <div class="reviews__slide">
+            </div>
+            <div class="reviews__slide">
+            </div>
+        </div>
+        <div class="reviews__arrow reviews__arrow-prev"><picture><source srcset="img/left-arrow.svg" type="image/webp"><img class="reviews__arrow-icon" src="img/left-arrow.svg" loading="lazy" alt="image"></picture></img></div>
+    <div class="reviews__arrow reviews__arrow-next"><picture><source srcset="img/right-arrow.svg" type="image/webp"><img class="reviews__arrow-icon" src="img/right-arrow.svg" loading="lazy" alt="image"></picture></img></div>
+    </div>
+</section>
+		<!-- about -->
+		<section class="about">
+    <picture><source srcset="img/about__image-01.webp" type="image/webp"><img class="about__image-01 lazyload" data-src="img/about__image-01.png" loading="lazy" alt="image"></picture></img>
+    <picture><source srcset="img/about__image-02.webp" type="image/webp"><img class="about__image-02 lazyload" data-src="img/about__image-02.png" loading="lazy" alt="image"></picture></img>
+    <div class="container">
+        <div class="about__inner">
+            <h4 class="about__title">О нас</h4>
+            <p class="about__text">Вы все еще не можете определиться, перекусывать ли в обеденный перерыв бутербродами,
+                бежать в кафе или <span>заказать обед</span>? Привозная домашняя кухня, комплексные обеды в Киеве – это
+                вкусные, недорогие кушанья и существенная экономия времени. Удобный сервис давно оценили многие люди и
+                питаются на работе здоровой и полноценной пищей <span>(бизнес ланч в Киеве).</span></p>
+            <p class="about__text">
+                Но как выбрать безупречного поставщика, который обеспечит своевременную <span>доставку обедов
+                    (Киев)</span> ведь подобных предложений в сфере общественного питания много. Мы готовы приподнять
+                завесу и открыть вам секрет. Однако для сначала целесообразно разобраться, почему лучше заказывать
+                высококачественные аппетитные обеды в офис (Киев) домашней кухни
+            </p>
+        </div>
+    </div>
+</section>
+	</main>
+	<!-- footer -->
+	<footer class="footer">
+    <div class="footer-top">
+            <div class="footer-top__inner">
+                <ul class="footer-top__list">
+                    <li class="footer-top__item">
+                        <a class="footer-top__link" href="#">ОФЕРТА</a>
+                    </li>
+                    <li class="footer-top__item">
+                        <a class="footer-top__link" href="#">СПОСОБ ОПЛАТЫ</a>
+                    </li>
+                    <li class="footer-top__item">
+                        <a class="footer-top__link" href="#">УСЛОВИЯ ДОСТАВКИ</a>
+                    </li>
+                    <li class="footer-top__item">
+                        <a class="footer-top__link" href="#">УСЛОВИЯ ВОЗВРАТА</a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom__copyright">
+            <div class="footer-bottom__item">Разработка сайтов - <span class="footer-bottom__author">Genesis
+                    Group</span></div>
+            <div class="footer-bottom__item">Продвижение сайта - <span class="footer-bottom__author">SEO-Angels</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+	<script src="js/script.min.js" defer></script>
+</body>
+
+</html>
